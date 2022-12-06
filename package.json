@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@redux-devtools/extension": "^3.2.3",
+    "react-redux": "^8.0.5",
+    "redux": "^4.2.0",
+    "redux-saga": "^1.2.1"
+  }
+}
