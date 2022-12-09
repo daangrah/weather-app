@@ -1,8 +1,13 @@
-
+const SET_CITY = 'SET_CITY'
 const initialState = {
-  users:[]
+  city:[]
 };
 
 export default function rootReducer(state = initialState, action){
-  return state;
+  switch (action.type){
+    case SET_CITY:
+      return {...state, city: [...state, action.payload]}
+    default:
+      return state
+  }
 };

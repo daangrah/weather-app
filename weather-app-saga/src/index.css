@@ -11,3 +11,47 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.App{
+  background: #0D1117;
+  min-height: 900px;
+}
+.app_name{
+  color: #4793FF;
+}
+.header {
+  padding-top: 10px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1500px;
+}
+.app_name{
+  font-size: 30px;
+}
+.logo, .logo1{
+  margin-right: 15px;
+}
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.this-day-container{
+  height: 300px;
+  background-color: #4f4f4f;
+  box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+  border-radius: 20px;
+}
+.this_day_info_container{
+  height: 300px;
+  background: #4F4F4F;
+  box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+  border-radius: 20px;
+}
+.today_container{
+  max-width: 900px;
+  margin: 35px auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 4fr;
+}
