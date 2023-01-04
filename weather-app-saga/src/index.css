@@ -49,6 +49,26 @@ code {
   box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
   border-radius: 20px;
 }
+.this-day-tamperature{
+  color: #4793FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 85px;
+  margin: 15px auto;
+}
+.this-day-city{
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  color: #c9c8c8;
+}
+.this-day{
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+}
 .today_container{
   max-width: 900px;
   margin: 35px auto;
