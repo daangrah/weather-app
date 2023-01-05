@@ -3,10 +3,10 @@ import {CLICK, SET_CITY, UPLOAD_WEATHER} from "../reducers/rootReducer";
 
 const API_key = '2e19406cc850004ee8896c266ef62484';
 const fetchWeather = ({lat, lon}) => fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_key}`).then(r=>r.json())
-const fetchPlace = (city_name) => fetch (`https://api.openweathermap.org/geo/1.0/direct?q=${city_name}}&appid=${API_key}`)
+const fetchPlace = (city) => fetch (`https://api.openweathermap.org/geo/1.0/direct?q=${city}}&appid=${API_key}`)
 
-export function* workerGetPlace(cityName) {
-  const data = yield call(fetchPlace, cityName);
+export function* workerGetPlace({payload: city}) {
+  const data = yield call(fetchPlace, city);
   const json = yield call(() => new Promise(res => res(data.json())))
   const lat = json[0].lat;
   const lon = json[0].lon;

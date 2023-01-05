@@ -9,13 +9,17 @@ const Header = () => {
   const dispatch = useDispatch()
   const [value, setValue] = useState('')
   const changed = (e) => (setValue(e.target.value));
-  const handlerAddTask = (e) => {
+  const handlerAddCity = (e) => {
     if (e.key === 'Enter' && value.trim()) {
-      let city_name = value.trim()
-      dispatch({type: CLICK, payload: city_name});
+      let city = value.trim()
+      addCity(city)
       setValue('');
+      console.log(city)
     }
   };
+  const addCity = (city) =>{
+    dispatch(addCityAction(city));
+  }
   return (
     <div className='header'>
       <div className='wrapper'>
@@ -27,11 +31,11 @@ const Header = () => {
         <input placeholder='Enter Your city...'
                value={value}
                onChange={changed}
-               onKeyDown={handlerAddTask}
+               onKeyDown={handlerAddCity}
         />
       </div>
     </div>
   );
 };
-
+const addCityAction = (payload) => ({ type: CLICK, payload });
 export default Header;
